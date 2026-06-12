@@ -1,0 +1,13 @@
+extraction_prompt: |
+  You are a memory extraction system. Given the following conversation turn,
+  identify any information worth remembering long-term.
+  Return a JSON list of memory objects or an empty list if nothing is worth storing.
+  
+  Memory types: preference, fact, entity, constraint, commitment, instruction
+  
+  Turn: {turn_text}
+
+retrieval_prompt: |
+  Given the current user query, retrieve the most relevant memories.
+  Current query: {query}
+  Available memories: {memories}
